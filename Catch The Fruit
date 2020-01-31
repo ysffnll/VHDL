@@ -1,0 +1,1328 @@
+Constrain 
+## This file is a general .xdc for the Basys3 rev B board 
+## To use it in a project: 
+## - uncomment the lines corresponding to used pins 
+## - rename the used ports (in each line, after get_ports) according to the top level signal names in the project 
+# Clock signal 
+set_property PACKAGE_PIN W5 [get_ports clk] 
+set_property IOSTANDARD LVCMOS33 [get_ports clk] 
+# create_clock -add -name sys_clk_pin -period 10.00 -waveform {0 5} [get_ports CLK100MHZ] 
+# Switches 
+set_property PACKAGE_PIN V17 [get_ports {sw[0]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}] 
+set_property PACKAGE_PIN V16 [get_ports {sw[1]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[1]}] 
+set_property PACKAGE_PIN W16 [get_ports {sw[2]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {sw[2]}] 
+#set_property PACKAGE_PIN W17 [get_ports {sw[3]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[3]}] 
+#set_property PACKAGE_PIN W15 [get_ports {sw[4]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[4]}] 
+#set_property PACKAGE_PIN V15 [get_ports {sw[5]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[5]}] 
+#set_property PACKAGE_PIN W14 [get_ports {sw[6]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[6]}] 
+#set_property PACKAGE_PIN W13 [get_ports {sw[7]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[7]}] 
+#set_property PACKAGE_PIN V2 [get_ports {sw[8]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[8]}] 
+#set_property PACKAGE_PIN T3 [get_ports {sw[9]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[9]}] 
+#set_property PACKAGE_PIN T2 [get_ports {sw[10]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[10]}] 
+#set_property PACKAGE_PIN R3 [get_ports {sw[11]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[11]}] 
+#set_property PACKAGE_PIN W2 [get_ports {sw[12]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[12]}] 
+#set_property PACKAGE_PIN U1 [get_ports {sw[13]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[13]}] 
+#set_property PACKAGE_PIN T1 [get_ports {sw[14]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[14]}] 
+#set_property PACKAGE_PIN R2 [get_ports {sw[15]}] 
+#set_property IOSTANDARD LVCMOS33 [get_ports {sw[15]}] 
+## LEDs 
+#set_property PACKAGE_PIN U16 [get_ports {LED[0]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[0]}] 
+#set_property PACKAGE_PIN E19 [get_ports {LED[1]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[1]}] 
+#set_property PACKAGE_PIN U19 [get_ports {LED[2]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[2]}] 
+#set_property PACKAGE_PIN V19 [get_ports {LED[3]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[3]}] 
+#set_property PACKAGE_PIN W18 [get_ports {LED[4]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[4]}] 
+#set_property PACKAGE_PIN U15 [get_ports {LED[5]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[5]}] 
+#set_property PACKAGE_PIN U14 [get_ports {LED[6]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[6]}] 
+#set_property PACKAGE_PIN V14 [get_ports {LED[7]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[7]}] 
+#set_property PACKAGE_PIN V13 [get_ports {LED[8]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[8]}] 
+#set_property PACKAGE_PIN V3 [get_ports {LED[9]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[9]}] 
+#set_property PACKAGE_PIN W3 [get_ports {LED[10]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[10]}] 
+#set_property PACKAGE_PIN U3 [get_ports {LED[11]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[11]}] 
+#set_property PACKAGE_PIN P3 [get_ports {LED[12]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[12]}] 
+#set_property PACKAGE_PIN N3 [get_ports {LED[13]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[13]}] 
+#set_property PACKAGE_PIN P1 [get_ports {LED[14]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[14]}] 
+#set_property PACKAGE_PIN L1 [get_ports {LED[15]}] 
+# set_property IOSTANDARD LVCMOS33 [get_ports {LED[15]}] 
+#7 segment display 
+set_property PACKAGE_PIN W7 [get_ports {seg[0]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[0]}] 
+set_property PACKAGE_PIN W6 [get_ports {seg[1]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[1]}] 
+set_property PACKAGE_PIN U8 [get_ports {seg[2]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[2]}] 
+set_property PACKAGE_PIN V8 [get_ports {seg[3]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[3]}] 
+set_property PACKAGE_PIN U5 [get_ports {seg[4]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[4]}] 
+set_property PACKAGE_PIN V5 [get_ports {seg[5]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[5]}] 
+set_property PACKAGE_PIN U7 [get_ports {seg[6]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {seg[6]}] 
+#set_property PACKAGE_PIN V7 [get_ports dp] 
+# set_property IOSTANDARD LVCMOS33 [get_ports dp] 
+set_property PACKAGE_PIN U2 [get_ports {an[0]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {an[0]}] 
+set_property PACKAGE_PIN U4 [get_ports {an[1]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {an[1]}] 
+set_property PACKAGE_PIN V4 [get_ports {an[2]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {an[2]}] 
+set_property PACKAGE_PIN W4 [get_ports {an[3]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {an[3]}] 
+##Buttons 
+#set_property PACKAGE_PIN U18 [get_ports btnC] 
+#set_property IOSTANDARD LVCMOS33 [get_ports btnC] 
+#set_property PACKAGE_PIN T18 [get_ports btnU] 
+#set_property IOSTANDARD LVCMOS33 [get_ports btnU] 
+set_property PACKAGE_PIN W19 [get_ports left] 
+set_property IOSTANDARD LVCMOS33 [get_ports left] 
+set_property PACKAGE_PIN T17 [get_ports right] 
+set_property IOSTANDARD LVCMOS33 [get_ports right] 
+#set_property PACKAGE_PIN U17 [get_ports btnD] 
+#set_property IOSTANDARD LVCMOS33 [get_ports btnD] 
+##VGA Connector 
+set_property PACKAGE_PIN G19 [get_ports {vgaRed[0]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaRed[0]}] 
+set_property PACKAGE_PIN H19 [get_ports {vgaRed[1]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaRed[1]}] 
+set_property PACKAGE_PIN J19 [get_ports {vgaRed[2]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaRed[2]}] 
+set_property PACKAGE_PIN N19 [get_ports {vgaRed[3]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaRed[3]}] 
+set_property PACKAGE_PIN N18 [get_ports {vgaBlue[0]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaBlue[0]}] 
+set_property PACKAGE_PIN L18 [get_ports {vgaBlue[1]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaBlue[1]}] 
+set_property PACKAGE_PIN K18 [get_ports {vgaBlue[2]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaBlue[2]}] 
+set_property PACKAGE_PIN J18 [get_ports {vgaBlue[3]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaBlue[3]}] 
+set_property PACKAGE_PIN J17 [get_ports {vgaGreen[0]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaGreen[0]}] 
+set_property PACKAGE_PIN H17 [get_ports {vgaGreen[1]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaGreen[1]}] 
+set_property PACKAGE_PIN G17 [get_ports {vgaGreen[2]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaGreen[2]}] 
+set_property PACKAGE_PIN D17 [get_ports {vgaGreen[3]}] 
+set_property IOSTANDARD LVCMOS33 [get_ports {vgaGreen[3]}] 
+set_property PACKAGE_PIN P19 [get_ports Hsync] 
+set_property IOSTANDARD LVCMOS33 [get_ports Hsync] 
+set_property PACKAGE_PIN R19 [get_ports Vsync] 
+set_property IOSTANDARD LVCMOS33 [get_ports Vsync] 
+Top Module 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity Top_Module is 
+Port ( 
+sw : in std_logic_vector(2 downto 0); 
+clk : in std_logic; 
+left : in std_logic; 
+right : in std_logic; 
+seg : out std_logic_vector(6 downto 0); 
+an : out std_logic_vector(3 downto 0); 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0); 
+Hsync : out std_logic; 
+Vsync : out std_logic 
+); 
+end Top_Module; 
+architecture Behavioral of Top_Module is 
+------------------------------------------- 
+signal h_pos :integer range -150 to 800; 
+signal v_pos :integer range -150 to 800; 
+signal video_enable :std_logic:='0'; 
+----------------------------------------- 
+component vga_drive 
+port( 
+clk : in std_logic; 
+hp : out integer range -150 to 800; 
+vp : out integer range -150 to 800; 
+ve :out std_logic; 
+Hsync : out std_logic; 
+Vsync : out std_logic); 
+end component; 
+component pixel_generator 
+port( 
+clk : in std_logic; 
+sw : in std_logic_vector(2 downto 0); 
+left : in std_logic; 
+right : in std_logic; 
+seg : out std_logic_vector(6 downto 0); 
+an : out std_logic_vector(3 downto 0); 
+h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+video_enable: in std_logic; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0)); 
+end component; 
+begin 
+pixelGenModule: pixel_generator port map (clk=>clk,h_pos => h_pos,v_pos => v_pos,video_enable => video_enable, 
+vgaRed => vgaRed,vgaBlue => vgaBlue,vgaGreen => vgaGreen, 
+sw => sw, 
+left => left, 
+right => right, 
+seg => seg, 
+an => an); 
+vga_driModule: vga_drive port map(hp => h_pos,vp => v_pos,ve => video_enable,clk => clk, 
+Hsync => Hsync,Vsync => Vsync); 
+end Behavioral; 
+pixelGenerator 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity pixel_generator is 
+port(clk : in std_logic; 
+sw : in std_logic_vector(2 downto 0); 
+left : in std_logic; 
+right : in std_logic; 
+seg : out std_logic_vector(6 downto 0); 
+an : out std_logic_vector(3 downto 0); 
+h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+video_enable: in std_logic; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0)); 
+end pixel_generator; 
+architecture Behavioral of pixel_generator is 
+signal counter: std_logic:='0'; 
+signal basClk: std_logic:='0'; 
+signal score : integer:=0; 
+signal rbit_out: std_logic:='0'; 
+signal hpos : integer:=0; 
+signal randomHpos : integer:=0; 
+signal vpos : integer:=0; 
+signal randomVpos : integer:=0; 
+signal basketHor : integer:=0; 
+signal speeds : integer:=4; 
+-------------------------------- 
+signal ch : integer:= 675; 
+signal cv : integer:= 150; 
+signal sh : integer:= 730; 
+signal sv : integer:= 250; 
+---------------------------------- 
+signal ph4 : integer:=715; 
+signal pv4 : integer:=40; 
+---------------------------------- 
+signal ph1 : integer:=15; 
+signal pv1 : integer:=100; 
+signal ph2 : integer:=60; 
+signal pv2 : integer:=200; 
+signal ph3 : integer:=120; 
+signal pv3 : integer:=300; 
+signal ah1 : integer:=180; 
+signal av1 : integer:=110; 
+signal ah2 : integer:=240; 
+signal av2 : integer:=220; 
+signal ah3 : integer:=300; 
+signal av3 : integer:=330; 
+signal wh1 : integer:=360; 
+signal wv1 : integer:=120; 
+signal wh2 : integer:=420; 
+signal wv2 : integer:=230; 
+signal wh3 : integer:=480; 
+signal wv3 : integer:=340; 
+signal bh : integer:=335; 
+signal bv : integer:=560; 
+----------apple ------------------------ 
+signal vgaRedA1 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueA1 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenA1 : std_logic_vector(3 downto 0):="0000"; 
+-- 
+signal vgaRedA2 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueA2 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenA2 : std_logic_vector(3 downto 0):="0000"; 
+-- 
+signal vgaRedA3 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueA3 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenA3 : std_logic_vector(3 downto 0):="0000"; 
+----------------------------------------- 
+----------pear ------------------------- 
+signal vgaRedP1 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueP1 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenP1 : std_logic_vector(3 downto 0):="0000"; 
+-- 
+signal vgaRedP2 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueP2 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenP2 : std_logic_vector(3 downto 0):="0000"; 
+-- 
+signal vgaRedP3 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueP3 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenP3 : std_logic_vector(3 downto 0):="0000"; 
+-- 
+signal vgaRedP4 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueP4 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenP4 : std_logic_vector(3 downto 0):="0000"; 
+----------------------------------------- 
+----------water ------------------------- 
+signal vgaRedW1 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueW1 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenW1 : std_logic_vector(3 downto 0):="0000"; 
+-- 
+signal vgaRedW2 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueW2 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenW2 : std_logic_vector(3 downto 0):="0000"; 
+-- 
+signal vgaRedW3 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueW3 : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenW3 : std_logic_vector(3 downto 0):="0000"; 
+----------------------------------------- 
+----------basket ------------------------- 
+signal vgaRedb : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlueb : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenb : std_logic_vector(3 downto 0):="0000"; 
+----------------------------------------- 
+----------catchIt ------------------------- 
+signal vgaRedc : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBluec : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreenc : std_logic_vector(3 downto 0):="0000"; 
+----------------------------------------- 
+signal vgaReds : std_logic_vector(3 downto 0):="0000"; 
+signal vgaBlues : std_logic_vector(3 downto 0):="0000"; 
+signal vgaGreens : std_logic_vector(3 downto 0):="0000"; 
+----------------------------------------- 
+component apple is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+appleH : in integer; 
+appleV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end component; 
+component pear is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+pearH : in integer; 
+pearV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end component; 
+component waterMelon is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+karpuzH : in integer; 
+karpuzV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end component; 
+component basket is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+basketH : in integer; 
+basketV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end component; 
+component catchIt is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+catchItH : in integer; 
+catchItV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end component; 
+component stages is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+speeds : in integer; 
+stageH : in integer; 
+stageV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end component; 
+-------------------------------------- 
+component scores is 
+Port ( 
+score : in integer; 
+clk: in std_logic; 
+seg: out std_logic_vector(6 downto 0); 
+an: out std_logic_vector(3 downto 0)); 
+end component; 
+-------------------------------------- 
+component gameSpeed is 
+Port ( 
+score : in integer; 
+clk: in std_logic; 
+sw: in std_logic_vector(2 downto 0); 
+speeds : out integer; 
+counter: out std_logic); 
+end component; 
+-------------------------------------- 
+component basketClock is 
+Port ( 
+clk: in std_logic; 
+basClk: out std_logic); 
+end component; 
+-------------------------------------- 
+component random is 
+port ( 
+clk : in std_logic; 
+rbit_out : out std_logic); 
+end component; 
+-------------------------------------- 
+begin 
+process(basclk) 
+begin 
+-------- random horizontal position ---------- 
+if(rising_edge(basclk))then 
+if(hpos=605)then 
+hpos <= 15; 
+else 
+if(rbit_out = '1' or right='1')then 
+randomHpos<=hpos; 
+end if; 
+hpos <= hpos + 1; 
+end if; 
+if(vpos=-150)then 
+vpos <= 0; 
+else 
+if(rbit_out = '1' or left='1')then 
+randomVpos<=vpos; 
+end if; 
+vpos <= vpos - 1; 
+end if; 
+end if; 
+end process; 
+---------------------------------------------- 
+-----basket rotation changer-------- 
+process(basClk) 
+begin 
+if(rising_edge(basClk))then 
+if((right='1'and left='1')or(right='0'and left='0'))then 
+bh <= bh; 
+elsif(right='1'and bh<635)then 
+bh <= bh + 1; 
+elsif(left='1'and bh>15)then 
+bh <= bh - 1; 
+end if; 
+bv <= 570; 
+end if; 
+end process; 
+------------------------------------------------------------------------- 
+---------------- vertical position changer and randoms------------------- 
+process(counter,sw) 
+begin 
+if(rising_edge(counter))then 
+if(sw(0)='0') then 
+ph1 <=15;pv1 <=100; 
+ph2 <=60;pv2 <=200; 
+ph3 <=120;pv3 <=300; 
+ah1 <=180;av1 <=110; 
+ah2 <=240;av2 <=220; 
+ah3 <=300;av3 <=330; 
+wh1 <=360;wv1 <=120; 
+wh2 <=420;wv2 <=230; 
+wh3 <=480;wv3 <=340; 
+score <=0; 
+elsif(sw(0)='1') then 
+if((pv1 = 540)and(bh-10 < ph1 and bh+30 >ph1)) then 
+if(speeds = 1)then 
+score <= score + 100; 
+elsif(speeds = 2)then 
+score <= score + 75; 
+elsif(speeds = 3)then 
+score <= score + 50; 
+else 
+score <= score + 25; 
+end if; 
+pv1 <= 620; 
+elsif(pv1<620)then 
+pv1 <= pv1+1; 
+else 
+ph1 <= randomHpos; 
+pv1 <= randomVpos; 
+end if; 
+if(pv2= 540 and (bh-10 < ph2 and bh+30 >ph2)) then 
+if(speeds = 1)then 
+score <= score + 100; 
+elsif(speeds = 2)then 
+score <= score + 75; 
+elsif(speeds = 3)then 
+score <= score + 50; 
+else 
+score <= score + 25; 
+end if; 
+pv2 <= 620; 
+elsif(pv2<620)then 
+pv2 <= pv2+1; 
+else 
+ph2 <= randomHpos; 
+pv2 <= randomVpos; 
+end if; 
+if(pv3= 540 and (bh-10 < ph3 and bh+30 >ph3)) then 
+if(speeds = 1)then 
+score <= score + 100; 
+elsif(speeds = 2)then 
+score <= score + 75; 
+elsif(speeds = 3)then 
+score <= score + 50; 
+else 
+score <= score + 25; 
+end if; 
+pv3 <= 620; 
+elsif(pv3<620)then 
+pv3 <= pv3+1; 
+else 
+ph3 <= randomHpos; 
+pv3 <= randomVpos; 
+end if; 
+if(av1= 540 and (bh-10 < ah1 and bh+30 >ah1)) then 
+score <= 0; 
+av1 <= 620; 
+elsif(av1<620)then 
+av1 <= av1+1; 
+else 
+ah1 <= randomHpos; 
+av1 <= randomVpos; 
+end if; 
+if(av2= 540 and (bh-10 < ah2 and bh+30 >ah2)) then 
+score <= 0; 
+av2 <= 620; 
+elsif(av2<620)then 
+av2 <= av2+1; 
+else 
+ah2 <= randomHpos; 
+av2 <= randomVpos; 
+end if; 
+if(av3= 540 and (bh-10 < ah3 and bh+30 >ah3)) then 
+score <= 0; 
+av3 <= 620; 
+elsif(av3<620)then 
+av3 <= av3+1; 
+else 
+ah3 <= randomHpos; 
+av3 <= randomVpos; 
+end if; 
+if(wv1= 550 and (bh-15 < wh1 and bh+25 >wh1)) then 
+score <= 0; 
+wv1 <= 620; 
+elsif(wv1<620)then 
+wv1 <= wv1+1; 
+else 
+wh1 <= randomHpos; 
+wv1 <= randomVpos; 
+end if; 
+if(wv2= 550 and (bh-15 < wh2 and bh+25 >wh2)) then 
+score <= 0; 
+wv2 <= 620; 
+elsif(wv2<620)then 
+wv2 <= wv2+1; 
+else 
+wh2 <= randomHpos; 
+wv2 <= randomVpos; 
+end if; 
+if(wv3= 550 and (bh-15 < wh3 and bh+25 >wh3)) then 
+score <= 0; 
+wv3 <= 620; 
+elsif(wv3<620)then 
+wv3 <= wv3+1; 
+else 
+wh3 <= randomHpos; 
+wv3 <= randomVpos; 
+end if; 
+end if; 
+end if; 
+end process; 
+-------------------------------------------------- 
+process(video_enable,h_pos,v_pos) 
+begin 
+if(video_enable = '1') then 
+----basketttttttttttttttttt 
+if(h_pos >= bh and h_pos <= bh+40 and v_pos >= bv and v_pos <= bv+40) then 
+vgaRed <= vgaRedb; 
+vgaBlue <= vgaBlueb; 
+vgaGreen <= vgaGreenb; 
+----CatchIttttttttttttttttt 
+elsif(v_pos >= cv and v_pos <= cv+45 and h_pos >= ch and h_pos <= ch+125) then 
+vgaRed <= vgaRedc; 
+vgaBlue <= vgaBluec; 
+vgaGreen <= vgaGreenc; 
+----applesssssssssssssssss 
+elsif(h_pos >= ah1 and h_pos <= ah1+20 and v_pos >= av1 and v_pos <= av1+30) then 
+vgaRed <= vgaReda1; 
+vgaBlue <= vgaBluea1; 
+vgaGreen <= vgaGreena1; 
+elsif(h_pos >= ah2 and h_pos <= ah2+20 and v_pos >= av2 and v_pos <= av2+30) then 
+vgaRed <= vgaReda2; 
+vgaBlue <= vgaBluea2; 
+vgaGreen <= vgaGreena2; 
+elsif(h_pos >= ah3 and h_pos <= ah3+20 and v_pos >= av3 and v_pos <= av3+30) then 
+vgaRed <= vgaReda3; 
+vgaBlue <= vgaBluea3; 
+vgaGreen <= vgaGreena3; 
+----pearssssssssssssssssss 
+elsif(h_pos >= ph1 and h_pos <= ph1+20 and v_pos >= pv1 and v_pos <= pv1+30) then 
+vgaRed <= vgaRedp1; 
+vgaBlue <= vgaBluep1; 
+vgaGreen <= vgaGreenp1; 
+elsif(h_pos >= ph2 and h_pos <= ph2+20 and v_pos >= pv2 and v_pos <= pv2+30) then 
+vgaRed <= vgaRedp2; 
+vgaBlue <= vgaBluep2; 
+vgaGreen <= vgaGreenp2; 
+elsif(h_pos >= ph3 and h_pos <= ph3+20 and v_pos >= pv3 and v_pos <= pv3+30) then 
+vgaRed <= vgaRedp3; 
+vgaBlue <= vgaBluep3; 
+vgaGreen <= vgaGreenp3; 
+elsif(h_pos >= ph4 and h_pos <= ph4+20 and v_pos >= pv4 and v_pos <= pv4+30) then 
+vgaRed <= vgaRedp4; 
+vgaBlue <= vgaBluep4; 
+vgaGreen <= vgaGreenp4; 
+----waterMelonsssssssssssss 
+elsif(h_pos >= wh1 and h_pos <= wh1+30 and v_pos >= wv1 and v_pos <= wv1+20) then 
+vgaRed <= vgaRedw1; 
+vgaBlue <= vgaBluew1; 
+vgaGreen <= vgaGreenw1; 
+elsif(h_pos >= wh2 and h_pos <= wh2+30 and v_pos >= wv2 and v_pos <= wv2+20) then 
+vgaRed <= vgaRedw2; 
+vgaBlue <= vgaBluew2; 
+vgaGreen <= vgaGreenw2; 
+elsif(h_pos >= wh3 and h_pos <= wh3+30 and v_pos >= wv3 and v_pos <= wv3+20) then 
+vgaRed <= vgaRedw3; 
+vgaBlue <= vgaBluew3; 
+vgaGreen <= vgaGreenw3; 
+elsif(h_pos >= sh and h_pos <= sh+40 and v_pos >= sv and v_pos <=sv+40) then 
+vgaRed <= vgaRedS; 
+vgaBlue <= vgaBlueS; 
+vgaGreen <= vgaGreenS; 
+-------------------------------------------------------- 
+else 
+vgaRed <= "0000"; 
+vgaBlue <= "0000"; 
+vgaGreen <= "0000"; 
+end if; 
+else 
+vgaRed <= "0000"; 
+vgaBlue <= "0000"; 
+vgaGreen <= "0000"; 
+end if; 
+end process; 
+----------port mapsssssssssssssssss--------------------- 
+stagess: stages port map (h_pos=>h_pos, v_pos=>v_pos,vgaRed=>vgaRedS,vgaGreen=>vgaGreenS,vgaBlue=>vgaBlueS,stageH=>sH, stageV=>sV,speeds=>speeds); 
+catch: catchIt port map (h_pos=>h_pos, v_pos=>v_pos,vgaRed=>vgaRedc,vgaGreen=>vgaGreenc,vgaBlue=>vgaBluec,catchItV=>cv, catchItH=>ch); 
+TheBasket: basket port map (h_pos=>h_pos, v_pos=>v_pos,basketV=>bv, basketH=>bh,vgaRed=>vgaRedb,vgaGreen=>vgaGreenb,vgaBlue=>vgaBlueb); 
+apple1:apple port map (h_pos=>h_pos, v_pos=>v_pos,appleV=>av1,appleH=>ah1,vgaRed=>vgaRedA1,vgaGreen=>vgaGreenA1,vgaBlue=>vgaBlueA1); 
+apple2:apple port map (h_pos=>h_pos, v_pos=>v_pos,appleV=>av2,appleH=>ah2,vgaRed=>vgaRedA2,vgaGreen=>vgaGreenA2,vgaBlue=>vgaBlueA2); 
+apple3:apple port map (h_pos=>h_pos, v_pos=>v_pos,appleV=>av3,appleH=>ah3,vgaRed=>vgaRedA3,vgaGreen=>vgaGreenA3,vgaBlue=>vgaBlueA3); 
+pear1:pear port map (h_pos=>h_pos, v_pos=>v_pos,pearV=>pv1,pearH=>ph1,vgaRed=>vgaRedP1,vgaGreen=>vgaGreenP1,vgaBlue=>vgaBlueP1); 
+pear2:pear port map (h_pos=>h_pos, v_pos=>v_pos,pearV=>pv2,pearH=>ph2,vgaRed=>vgaRedP2,vgaGreen=>vgaGreenP2,vgaBlue=>vgaBlueP2); 
+pear3:pear port map (h_pos=>h_pos, v_pos=>v_pos,pearV=>pv3,pearH=>ph3,vgaRed=>vgaRedP3,vgaGreen=>vgaGreenP3,vgaBlue=>vgaBlueP3); 
+pear4:pear port map (h_pos=>h_pos, v_pos=>v_pos,pearV=>pv4,pearH=>ph4,vgaRed=>vgaRedP4,vgaGreen=>vgaGreenP4,vgaBlue=>vgaBlueP4); 
+water1:waterMelon port map (h_pos=>h_pos, v_pos=>v_pos,karpuzV=>wv1,karpuzH=>wh1,vgaRed=>vgaRedW1,vgaGreen=>vgaGreenW1,vgaBlue=>vgaBlueW1); 
+water2:waterMelon port map (h_pos=>h_pos, v_pos=>v_pos,karpuzV=>wv2,karpuzH=>wh2,vgaRed=>vgaRedW2,vgaGreen=>vgaGreenW2,vgaBlue=>vgaBlueW2); 
+water3:waterMelon port map (h_pos=>h_pos, v_pos=>v_pos,karpuzV=>wv3,karpuzH=>wh3,vgaRed=>vgaRedW3,vgaGreen=>vgaGreenW3,vgaBlue=>vgaBlueW3); 
+------------------------------- 
+randomModule: random port map (clk => clk,rbit_out=>rbit_out); 
+basketClk: basketClock port map (clk => clk,basClk => basClk); 
+speed: gameSpeed port map (score => score,clk => clk,sw => sw,counter => counter,speeds=>speeds); 
+sevenSeg: scores port map (score => score,clk => clk,seg => seg,an => an); 
+end Behavioral; 
+Vga Driver 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity vga_drive is 
+port( 
+clk : in std_logic; 
+hp : out integer range -150 to 800; 
+vp : out integer range -150 to 800; 
+ve : out std_logic; 
+Hsync : out std_logic; 
+Vsync : out std_logic 
+); 
+end vga_drive; 
+architecture Behavioral of vga_drive is 
+signal h_counter, h_counter_next: integer range 0 to 1039; 
+signal v_counter, v_counter_next: integer range 0 to 665; 
+signal pixel_clk, pixel_clk_next: std_logic:='0'; 
+signal h_end, v_end:std_logic:='0'; 
+signal hsnyc_signal, hsnyc_signal_next:std_logic:='0'; 
+signal vsnyc_signal, vsnyc_signal_next:std_logic:='0'; 
+signal h_pos, h_pos_next:integer range 0 to 800; 
+signal v_pos, v_pos_next:integer range 0 to 600; 
+signal video_enable:std_logic:='0'; 
+begin 
+process(clk) 
+begin 
+if clk'event and clk='1' then 
+h_counter<=h_counter_next; 
+v_counter<=v_counter_next; 
+h_pos<=h_pos_next; 
+v_pos<=v_pos_next; 
+hsnyc_signal<=hsnyc_signal_next; 
+vsnyc_signal<=vsnyc_signal_next; 
+pixel_clk<=pixel_clk_next; 
+end if; 
+end process; 
+video_enable <= '1' when (v_counter >= 23) and (v_counter < 623) and (h_counter >=64) and (h_counter < 864) else '0'; 
+pixel_clk_next<=not pixel_clk; 
+h_end<= '1' when h_counter=1024 else '0'; 
+v_end<= '1' when v_counter=665 else '0'; 
+process(h_counter,pixel_clk,h_end) 
+begin 
+h_counter_next<=h_counter; 
+if pixel_clk= '1' then 
+if h_end='1' then 
+h_counter_next<=0; 
+else 
+h_counter_next<=h_counter+1; 
+end if; 
+end if; 
+end process; 
+process(v_counter,pixel_clk,h_end,v_end) 
+begin 
+v_counter_next <= v_counter; 
+if pixel_clk= '1' and h_end='1' then 
+if v_end='1' then 
+v_counter_next<=0; 
+else 
+v_counter_next<=v_counter+1; 
+end if; 
+end if; 
+end process; 
+process(h_pos,pixel_clk,h_end,video_enable) 
+begin 
+h_pos_next<=h_pos; 
+if video_enable = '1' then 
+if pixel_clk= '1' then 
+if h_pos= 799 then 
+h_pos_next<=0; 
+else 
+h_pos_next<=h_pos + 1; 
+end if; 
+end if; 
+else 
+h_pos_next<=0; 
+end if; 
+end process; 
+process(v_pos,pixel_clk,h_end,v_counter) 
+begin 
+v_pos_next<=v_pos; 
+if pixel_clk = '1' and h_end='1' then 
+if v_counter >23 and v_counter <622 then 
+v_pos_next<=v_pos + 1; 
+else 
+v_pos_next<=0; 
+end if; 
+end if; 
+end process; 
+hp <= h_pos; 
+vp <= v_pos; 
+ve <= video_enable; 
+hsnyc_signal_next <= '1' when h_counter < 920 else '0'; 
+vsnyc_signal_next <= '1' when v_counter < 660 else '0'; 
+Hsync<= hsnyc_signal; 
+Vsync<= vsnyc_signal; 
+end Behavioral; 
+Stages module 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity stages is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+speeds: in integer; 
+stageH : in integer; 
+stageV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end stages; 
+architecture Behavioral of stages is 
+begin 
+process(h_pos,v_pos,speeds) 
+begin 
+if(speeds = 1 and v_pos >= stageV and v_pos <= stageV+20 and h_pos >= stageH and h_pos <= stageH+5) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 1 and v_pos >= stageV and v_pos <= stageV+40 and h_pos >= stageH+20 and h_pos <= stageH+25) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 1 and v_pos >= stageV+17 and v_pos <= stageV+22 and h_pos >= stageH and h_pos <= stageH+25) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 2 and v_pos >= stageV and v_pos <= stageV+5 and h_pos >= stageH and h_pos <= stageH+25) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 2 and v_pos >= stageV+18 and v_pos <= stageV+22 and h_pos >= stageH and h_pos <= stageH+25) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 2 and v_pos >= stageV+35 and v_pos <= stageV+40 and h_pos >= stageH and h_pos <= stageH+25) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 2 and v_pos >= stageV and v_pos <= stageV+40 and h_pos >= stageH+20 and h_pos <= stageH+25) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 3 and v_pos >= stageV and v_pos <= stageV+5 and h_pos >= stageH and h_pos <= stageH+25) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 3 and v_pos >= stageV+18 and v_pos <= stageV+22 and h_pos >= stageH and h_pos <= stageH+25) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 3 and v_pos >= stageV+35 and v_pos <= stageV+40 and h_pos >= stageH and h_pos <= stageH+25) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 3 and v_pos >= stageV and v_pos <= stageV+20 and h_pos >= stageH+20 and h_pos <= stageH+25) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 3 and v_pos >= stageV+20 and v_pos <= stageV+40 and h_pos >= stageH and h_pos <= stageH+5) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(speeds = 4 and v_pos >= stageV and v_pos <= stageV+40 and h_pos >= stageH+8 and h_pos <= stageH+13) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+else 
+vgaRed <= "0000"; 
+vgaBlue <= "0000"; 
+vgaGreen <= "0000"; 
+end if; 
+end process; 
+end Behavioral; 
+Cath it Module 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity catchIt is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+catchItH : in integer; 
+catchItV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end catchIt; 
+architecture Behavioral of catchIt is 
+begin 
+process(h_pos,v_pos) 
+begin 
+if(v_pos >= catchItV and v_pos <= catchItV+20 and h_pos >= catchItH and h_pos <= catchItH+4) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV and v_pos <= catchItV+20 and h_pos >= catchItH+25 and h_pos <= catchItH+29) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV and v_pos <= catchItV+20 and h_pos >= catchItH+41 and h_pos <= catchItH+45) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV and v_pos <= catchItV+20 and h_pos >= catchItH+58 and h_pos <= catchItH+62) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV and v_pos <= catchItV+20 and h_pos >= catchItH+75 and h_pos <= catchItH+79) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV and v_pos <= catchItV+20 and h_pos >= catchItH+100 and h_pos <= catchItH+104) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV and v_pos <= catchItV+20 and h_pos >= catchItH+116 and h_pos <= catchItH+120) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV+25 and v_pos <= catchItV+45 and h_pos >= catchItH+43 and h_pos <= catchItH+47) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV+25 and v_pos <= catchItV+45 and h_pos >= catchItH+68 and h_pos <= catchItH+72) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV and v_pos <= catchItV+4 and h_pos >= catchItH and h_pos <= catchItH+20) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV+16 and v_pos <= catchItV+20 and h_pos >= catchItH and h_pos <= catchItH+20) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV and v_pos <= catchItV+4 and h_pos >= catchItH+25 and h_pos <= catchItH+45) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV+8 and v_pos <= catchItV+12 and h_pos >= catchItH+25 and h_pos <= catchItH+45) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV and v_pos <= catchItV+4 and h_pos >= catchItH+50 and h_pos <= catchItH+70) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV and v_pos <= catchItV+4 and h_pos >= catchItH+75 and h_pos <= catchItH+95) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV+16 and v_pos <= catchItV+20 and h_pos >= catchItH+75 and h_pos <= catchItH+95) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV+8 and v_pos <= catchItV+12 and h_pos >= catchItH+100 and h_pos <= catchItH+120) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV+25 and v_pos <= catchItV+29 and h_pos >= catchItH+35 and h_pos <= catchItH+55) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV+41 and v_pos <= catchItV+45 and h_pos >= catchItH+35 and h_pos <= catchItH+55) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+elsif(v_pos >= catchItV+25 and v_pos <= catchItV+29 and h_pos >= catchItH+60 and h_pos <= catchItH+80) then 
+vgaRed <= "1111"; 
+vgaBlue <= "1111"; 
+vgaGreen <= "1111"; 
+else 
+vgaRed <= "0000"; 
+vgaBlue <= "0000"; 
+vgaGreen <= "0000"; 
+end if; 
+end process; 
+end Behavioral; 
+Basket Module 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+entity basket is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+basketH : in integer; 
+basketV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end basket; 
+architecture Behavioral of basket is 
+begin 
+process(h_pos,v_pos,basketH,basketV) 
+begin 
+if(v_pos >= basketV and v_pos <= basketV+30 and h_pos >= basketH and h_pos <= basketH+4) then 
+vgaRed <= "1011"; 
+elsif(v_pos >= basketV+10 and v_pos <= basketV+20 and h_pos >= basketH+10 and h_pos <= basketH+15) then 
+vgaRed <= "1011"; 
+elsif(v_pos >= basketV+10 and v_pos <= basketV+20 and h_pos >= basketH+25 and h_pos <= basketH+30) then 
+vgaRed <= "1011"; 
+elsif(v_pos >= basketV and v_pos <= basketV+30 and h_pos >= basketH+35 and h_pos <= basketH+40) then 
+vgaRed <= "1011"; 
+elsif(v_pos >= basketV+20 and v_pos <= basketV+30 and h_pos >= basketH and h_pos <= basketH+40) then 
+vgaRed <= "1011"; 
+elsif(v_pos >= basketV and v_pos <= basketV+2 and h_pos >= basketH and h_pos <= basketH+12) then 
+vgaRed <= "1011"; 
+elsif(v_pos >= basketV and v_pos <= basketV+2 and h_pos >= basketH+28 and h_pos <= basketH+40) then 
+vgaRed <= "1011"; 
+elsif(v_pos >= basketV and v_pos <= basketV+10 and h_pos >= basketH+10 and h_pos <= basketH+12) then 
+vgaRed <= "1011"; 
+elsif(v_pos >= basketV and v_pos <= basketV+10 and h_pos >= basketH+28 and h_pos <= basketH+30) then 
+vgaRed <= "1011"; 
+elsif(v_pos >= basketV and v_pos <= basketV+2 and h_pos >= basketH and h_pos <= basketH+12) then 
+vgaRed <= "1011"; 
+elsif(v_pos >= basketV+10 and v_pos <= basketV+13 and h_pos >= basketH+10 and h_pos <= basketH+30) then 
+vgaRed <= "1011"; 
+else 
+vgaRed <= "0000"; 
+vgaBlue <= "0000"; 
+vgaGreen <= "0000"; 
+end if; 
+end process; 
+end Behavioral; 
+WaterMeloon Module 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity waterMelon is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+karpuzH : in integer; 
+karpuzV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end waterMelon; 
+architecture Behavioral of waterMelon is 
+begin 
+process(h_pos,v_pos,karpuzH,karpuzV) 
+begin 
+if ((100 >= ((karpuzV+10-v_pos)*(karpuzV+10-v_pos))+((karpuzH+10-h_pos)*(karpuzH+10-h_pos)))or(100 >= ((karpuzV+10-v_pos)*(karpuzV+10-v_pos))+((karpuzH+20-h_pos)*(karpuzH+20-h_pos)))or((h_pos>=karpuzH+10)and(h_pos<=karpuzH+20)and(v_pos<=karpuzV+20)and(v_pos>=karpuzV))) then 
+vgaGreen <= "1111"; 
+--------------çizgiler 
+if(( v_pos >=karpuzV+5) and (v_pos <= karpuzV+9)) then 
+vgaBlue <= "1111"; 
+elsif (( v_pos >=karpuzV+15) and (v_pos <= karpuzV+18)) then 
+vgaBlue <= "1111"; 
+else 
+vgaBlue <= "0000"; 
+end if; 
+else 
+vgaRed <= "0000"; 
+vgaBlue <= "0000"; 
+vgaGreen <= "0000"; 
+end if; 
+end process; 
+end Behavioral; 
+Pear Module 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity pear is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+pearH : in integer; 
+pearV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end pear; 
+architecture Behavioral of pear is 
+begin 
+process(h_pos,v_pos,pearH,pearV) 
+begin 
+if(v_pos >= pearV and v_pos <= pearV+2 and h_pos >= pearH+7 and h_pos <= pearH+11) then 
+vgaRed <= "0111"; 
+elsif(v_pos > pearV+2 and v_pos < pearV+6 and h_pos >= pearH+9 and h_pos <= pearH+11) then 
+vgaRed <= "0111"; 
+elsif((36 >= ((pearV+10-v_pos)*(pearV+10-v_pos) + (pearH+10-h_pos)*(pearH+10-h_pos)))or(100 >= ((pearV+20-v_pos)*(pearV+20-v_pos) + (pearH+10-h_pos)*(pearH+10-h_pos)))) then 
+vgaRed <= "1111"; 
+vgaGreen <= "1111"; 
+else 
+vgaRed <= "0000"; 
+vgaBlue <= "0000"; 
+vgaGreen <= "0000"; 
+end if; 
+end process; 
+end Behavioral; 
+Apple Module 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity apple is 
+Port ( h_pos : in integer range -150 to 800; 
+v_pos : in integer range -150 to 800; 
+appleH : in integer; 
+appleV : in integer; 
+vgaRed : out std_logic_vector(3 downto 0); 
+vgaBlue : out std_logic_vector(3 downto 0); 
+vgaGreen : out std_logic_vector(3 downto 0) 
+); 
+end apple; 
+architecture Behavioral of apple is 
+begin 
+process(h_pos,v_pos,appleH,appleV) 
+begin 
+if(v_pos >= appleV and v_pos <= appleV+2 and h_pos >= appleH+9 and h_pos <= appleH+17) then 
+vgaRed <= "0111"; 
+elsif(v_pos >= appleV+2 and v_pos <= appleV+10 and h_pos >= appleH+9 and h_pos <= appleH+11) then 
+vgaRed <= "0111"; 
+elsif (100 >= ((appleV+20-v_pos)*(appleV+20-v_pos) + (appleH+10-h_pos)*(appleH+10-h_pos))) then 
+vgaRed <= "1111"; 
+else 
+vgaRed <= "0000"; 
+vgaBlue <= "0000"; 
+vgaGreen <= "0000"; 
+end if; 
+end process; 
+end Behavioral; 
+Random Module 
+library IEEE; 
+use IEEE.std_logic_1164.all; 
+use Ieee.numeric_std.all; 
+entity random is 
+port ( 
+clk : in std_logic; 
+rbit_out : out std_logic 
+); 
+end random; 
+architecture Behavioral of random is 
+signal lfsr: std_logic_vector (3 downto 0):= "0000"; 
+signal feedback: std_logic:='0'; 
+begin 
+feedback <= not(lfsr(3) xor lfsr(2)); 
+process (clk) 
+begin 
+if (rising_edge(clk)) then 
+lfsr <= lfsr(2 downto 0) & feedback; 
+end if; 
+end process; 
+rbit_out <= lfsr(3); 
+end Behavioral; 
+Basket Clock Divider 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity basketClock is 
+Port ( 
+clk: in std_logic; 
+basClk: out std_logic); 
+end basketClock; 
+architecture Behavioral of basketClock is 
+signal bclk: std_logic:='0'; 
+signal count: integer:=0; 
+begin 
+process(clk) 
+begin 
+if(rising_edge(clk))then 
+if(count = 65000) then 
+bclk <= not bclk; 
+count <= 0; 
+else 
+count <= count + 1; 
+end if; 
+end if; 
+end process; 
+basClk <= bclk; 
+end Behavioral; 
+Game Speed Module 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity gameSpeed is 
+Port ( 
+score : in integer; 
+clk: in std_logic; 
+sw: in std_logic_vector(2 downto 0); 
+speeds : out integer; 
+counter: out std_logic); 
+end gameSpeed; 
+architecture Behavioral of gameSpeed is 
+signal speed4: std_logic:='0'; 
+signal speed3: std_logic:='0'; 
+signal speed2: std_logic:='0'; 
+signal speed1: std_logic:='0'; 
+signal speed: std_logic:='0'; 
+signal speed4sec: integer range 0 to 300001:=0; 
+signal speed3sec: integer range 0 to 250001:=0; 
+signal speed2sec: integer range 0 to 250001:=0; 
+signal speed1sec: integer range 0 to 250001:=0; 
+signal speed123 : integer range 0 to 4:=0; 
+begin 
+process(clk) 
+begin 
+if rising_edge(clk) then 
+if(speed4sec = 300000)then 
+speed4 <= not speed4; 
+speed4sec <= 0; 
+else 
+speed4sec <= speed4sec + 1; 
+end if; 
+if(speed3sec = 220000)then 
+speed3 <= not speed3; 
+speed3sec <= 0; 
+else 
+speed3sec <= speed3sec + 1; 
+end if; 
+if(speed2sec = 166666)then 
+speed2 <= not speed2; 
+speed2sec <= 0; 
+else 
+speed2sec <= speed2sec + 1; 
+end if; 
+if(speed1sec = 83333)then 
+speed1 <= not speed1; 
+speed1sec <= 0; 
+else 
+speed1sec <= speed1sec + 1; 
+end if; 
+end if; 
+end process; 
+process(sw,score) 
+begin 
+if(sw(2 downto 1)="11")then 
+speed <= speed1; 
+speed123 <= 1; 
+elsif(sw(2 downto 1)="10")then 
+speed <= speed2; 
+speed123 <= 2; 
+elsif(sw(2 downto 1)="01")then 
+speed <= speed3; 
+speed123 <= 3; 
+elsif(sw(2 downto 1)="00")then 
+if(score >3000)then 
+speed <= speed1; 
+speed123 <= 1; 
+elsif(score >1000)then 
+speed <= speed2; 
+speed123 <= 2; 
+elsif((score >500))then 
+speed <= speed3; 
+speed123 <= 3; 
+else 
+speed <= speed4; 
+speed123 <= 4; 
+end if; 
+end if; 
+end process; 
+speeds <= speed123; 
+counter <= speed; 
+end Behavioral; 
+Scores Module 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity scores is 
+Port ( 
+score : in integer; 
+clk: in std_logic; 
+seg: out std_logic_vector(6 downto 0); 
+an: out std_logic_vector(3 downto 0)); 
+end scores; 
+architecture Behavioral of scores is 
+signal OneKHzClk : std_logic:='0'; 
+signal decimalNum : integer:=0; 
+signal SelDec : integer:=0; 
+signal tb :integer:=0; 
+component clkDiv is 
+port( 
+clk : in std_logic; 
+OneKHzClk : out std_logic); 
+end component; 
+component DecToSev is 
+port( 
+clk : in std_logic; 
+SelDec : in integer; 
+seg : out std_logic_vector(6 downto 0)); 
+end component; 
+begin 
+process(OneKHzClk) 
+begin 
+if (rising_edge(OneKHzClk)) then 
+if (tb = 0) then 
+seldec <= score mod 10; 
+an <= "1110"; 
+tb <= 1; 
+elsif(tb = 1) then 
+seldec <= score/10 mod 10; 
+an <= "1101"; 
+tb <= 2; 
+elsif(tb = 2) then 
+seldec <= score/100 mod 10; 
+an <= "1011"; 
+tb <= 3; 
+else 
+seldec <= score/1000 mod 10; 
+an <= "0111"; 
+tb <= 0; 
+end if; 
+end if; 
+end process; 
+ClkDivider: clkDiv port map (clk=>clk, OneKHzClk=>OneKHzClk); 
+SevDecoder: DecToSev port map (clk=>clk,SelDec=>SelDec,seg=>seg); 
+end Behavioral; 
+Clk Divider 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity clkDiv is 
+port( 
+clk : in std_logic; 
+OneKHzClk : out std_logic); 
+end clkDiv; 
+architecture Behavioral of clkDiv is 
+signal counter: integer range 0 to 49999:=0; 
+signal OneKHz : std_logic:='0'; 
+begin 
+process(clk) 
+begin 
+if (rising_edge(clk)) then 
+if (counter = 49999) then 
+OneKHz <= not OneKHz; 
+counter <= 0; 
+else 
+counter <= counter + 1; 
+end if; 
+end if; 
+end process; 
+OneKHzClk <= OneKHz; 
+end Behavioral; 
+Decimal to Seven Segment Module 
+library IEEE; 
+use IEEE.STD_LOGIC_1164.ALL; 
+use Ieee.numeric_std.all; 
+entity DecToSev is 
+port( 
+clk : in std_logic; 
+SelDec : in integer; 
+seg : out std_logic_vector(6 downto 0)); 
+end DecToSev; 
+architecture Behavioral of DecToSev is 
+begin 
+process(SelDec,clk) 
+begin 
+if (rising_edge(clk))then 
+case SelDec is 
+when 0 => seg <= "1000000"; 
+when 1 => seg <= "1111001"; 
+when 2 => seg <= "0100100"; 
+when 3 => seg <= "0110000"; 
+when 4 => seg <= "0011001"; 
+when 5 => seg <= "0010010"; 
+when 6 => seg <= "0000010"; 
+when 7 => seg <= "1111000"; 
+when 8 => seg <= "0000000"; 
+when 9 => seg <= "0010000"; 
+when others => seg <= "1111111"; 
+end case; 
+end if; 
+end process; 
+end Behavioral; 
